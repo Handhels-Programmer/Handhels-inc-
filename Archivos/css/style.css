@@ -652,6 +652,14 @@ main{
     padding: 0 30px; /* Márgenes laterales */
   }
   
+  .igualas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre columnas */
+    flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
+    padding: 0 10px; /* Márgenes laterales */
+  }
+  
   .igualas h1 {
     width: 100%; /* El título ocupa todo el ancho */
     text-align: center;
@@ -667,6 +675,11 @@ main{
     background-color: #f9f9f9; /* Color de fondo del recuadro */
     margin-bottom: 20px; /* Espacio inferior entre recuadros */
     box-sizing: border-box; /* Asegura que padding y borde no afecten el ancho total */
+  }
+  
+  /* Justificar texto de la primera columna */
+  .columna1 p, .columna1 ul {
+    text-align: left; /* Justificar el texto */
   }
   
   ul {
@@ -685,6 +698,7 @@ main{
     }
   }
   
+  
 
   .divider {
     width: 100%; /* Asegura que la línea ocupe todo el ancho de la pantalla */
@@ -694,4 +708,4 @@ main{
     /* Opcional: agregar sombras o efectos */
     box-shadow: 0
 
-    
+  }  
