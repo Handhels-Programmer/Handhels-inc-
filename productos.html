@@ -1,20 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!Doctype html>
+<html lang="DO">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>Handhels Inc</title>
+    <link rel="icon" href="Archivos/img/Identidad/Favicon.png" type="image/png">
+    <link href="Archivos/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
       <div class="menu logo-nav">
-        <a href="index.html" class="logo">HANDHELS INC</a>
+        <a href="index.html" class="logo">
+          <img src="Archivos/img/Identidad/Logo-Doc.png" alt="HANDHELS INC" width="150" height="auto">
+        </a>
         <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
         <nav class="navigation">
           <ul>
-            <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="productos.html">Productos</a></li>
+            <li><a href="igualas.html">Igualas</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li class="search-icon">
               <input type="search" placeholder="Search">
@@ -49,106 +52,41 @@
     </header>
 
 
-<main>
+    <main>
 
-        <div class="modal" id="modal">
-          <div class="modal-content">
-            <img src="" alt="" class="modal-img" id="modal-img">
-          </div>
-          <div class="modal-boton" id="modal-boton">X</div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <img src="" alt="" class="modal-img" id="modal-img">
         </div>
+        <div class="modal-boton" id="modal-boton">X</div>
+      </div>
 
-        <div class="container-productos" id="lista-productos">
+      <div class="container-productos" id="lista-productos">
 
-          <div class="card">
-            <img src="assets/img/3Ds-Max.jpg" class="card-img">
-            <h5>3Ds Max</h5>
-            <p>SKU: 3dsmax</p>
-            <p>RD$<small class="precio">2000</small></p>
-            <a href="#" class="button agregar-carrito" data-id="1">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/Activación-de-Office.jpg" class="card-img">
-            <h5>Activación de Office</h5>
-            <p>SKU: actoff</p>
-            <p>RD$<small class="precio">750</small></p>
-            <a href="#" class="button agregar-carrito" data-id="2">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/alimento1.webp" class="card-img">
-            <h5>Pack Yogy Helado para perros 100% Natural 100g de Barker</h5>
-            <p>SKU: BPY4UND</p>
-            <p>S/.<small class="precio">24</small></p>
-            <a href="#" class="button agregar-carrito" data-id="3">Comprar</a>
-          </div>
-
-          <div class="card">
-            <img src="assets/img/alimento2.webp" class="card-img">
-            <h5>Dingo Dental Mini Bones 7und x70gr</h5>
-            <p>SKU: DDMB7U70GR</p>
-            <p>S/.<small class="precio">26</small></p>
-            <a href="#" class="button agregar-carrito" data-id="4">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/juguete3.webp" class="card-img">
-            <h5>Hartz - Duraplay Ball Medium</h5>
-            <p>SKU: HDB04</p>
-            <p>S/.<small class="precio">35</small></p>
-            <a href="#" class="button agregar-carrito" data-id="5">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/ropa2.jpeg" class="card-img">
-            <h5>Ropa Avengers</h5>
-            <p>SKU: ROP0000023</p>
-            <p>S/.<small class="precio">21</small></p>
-            <a href="#" class="button agregar-carrito" data-id="6">Comprar</a>
-          </div>
-
-          <div class="card">
-            <img src="assets/img/juguete2.webp" class="card-img">
-            <h5>Animal Planet Juguete P/Mascota Medium</h5>
-            <p>SKU: AP-D794-011</p>
-            <p>S/.<small class="precio">29</small></p>
-            <a href="#" class="button agregar-carrito" data-id="7">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/ropa3.webp" class="card-img">
-            <h5>Hoodie Hotdogz Mr. Charlie</h5>
-            <p>SKU: HTD-TSH023-1</p>
-            <p>S/.<small class="precio">90</small></p>
-            <a href="#" class="button agregar-carrito" data-id="8">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/alimento3.webp" class="card-img">
-            <h5>Hills PD Metabolic Treats</h5>
-            <p>SKU: HPDMT</p>
-            <p>S/.<small class="precio">45</small></p>
-            <a href="#" class="button agregar-carrito" data-id="9">Comprar</a>
-          </div>
-
-          <div class="card">
-            <img src="assets/img/juguete2.webp" class="card-img">
-            <h5>Animal Planet Juguete P/Mascota Medium</h5>
-            <p>SKU: AP-D794-011</p>
-            <p>S/.<small class="precio">29</small></p>
-            <a href="#" class="button agregar-carrito" data-id="7">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/ropa3.webp" class="card-img">
-            <h5>Hoodie Hotdogz Mr. Charlie</h5>
-            <p>SKU: HTD-TSH023-1</p>
-            <p>S/.<small class="precio">90</small></p>
-            <a href="#" class="button agregar-carrito" data-id="8">Comprar</a>
-          </div>
-          <div class="card">
-            <img src="assets/img/alimento3.webp" class="card-img">
-            <h5>Hills PD Metabolic Treats</h5>
-            <p>SKU: HPDMT</p>
-            <p>S/.<small class="precio">45</small></p>
-            <a href="#" class="button agregar-carrito" data-id="9">Comprar</a>
-          </div>
-
+        <div class="card">
+          <img src="Archivos/img/Productos/3Ds-Max.jpg" class="card-img">
+          <h5>3Ds Max</h5>
+          <p>SKU: 3dsmax</p>
+          <p><RD1>$</RD1><small class="precio">2000</small></p>
+          <a href="#" class="button agregar-carrito" data-id="1">Comprar</a>
         </div>
+        <div class="card">
+          <img src="Archivos/img/Productos/Activación-de-Office.jpg" class="card-img">
+          <h5>Activación de Office</h5>
+          <p>SKU: actoff</p>
+          <p><RD1>$</RD1><small class="precio">750</small></p>
+          <a href="#" class="button agregar-carrito" data-id="2">Comprar</a>
+        </div>
+        <div class="card">
+          <img src="Archivos/img/Iconos/Ciberseguridad.png" class="card-img">
+          <h5>Activación de Office</h5>
+          <p>SKU: actoff</p>
+          <p><RD1>$</RD1><small class="precio">1000</small></p>
+          <a href="#" class="button agregar-carrito" data-id="3">Comprar</a>
+        </div>
+       
+
+      </div>
 </main>
   
 
@@ -158,15 +96,15 @@
           <div class="row-footer">
               <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                   <div class="copyright-text">
-                      <p>Copyright &copy; 2020, todos los derechos reservados <a href="index.html">Handhels Inc</a></p>
+                      <p>Copyright &copy; 2024, todos los derechos reservados By <a href="index.html">Handhels Inc</a></p>
                   </div>
               </div>
               <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                   <div class="footer-menu">
                       <ul>
-                          <li><a href="nosotros.html">Nosotros</a></li>
-                          <li><a href="productos.html">Productos</a></li>
-                          <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="igualas.html">Igualas</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                       </ul>
                   </div>
               </div>
@@ -177,11 +115,11 @@
 
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script  src="assets/js/scripts.js"></script>
-    <script src="assets/js/carrito.js"></script>
-    <script src="assets/js/pedido.js"></script>
-    <script src="assets/js/compra.js"></script>
+    <script src="Archivos/js/scripts.js"></script>
+    <script src="Archivos/js/carrito.js"></script>
+    <script src="Archivos/js/pedido.js"></script>
+    <script src="Archivos/js/compra.js"></script>
 </body>
 </html>
