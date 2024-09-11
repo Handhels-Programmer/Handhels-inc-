@@ -27,8 +27,8 @@ img{
 .button:hover{
     cursor: pointer;
     text-decoration: none;
-    background-color: #9a4912;
-    color: #f2f2f2;
+    background-color: #ffffff;
+    color: #ff0000;
 }
 
 
@@ -657,7 +657,7 @@ main{
     justify-content: space-between;
     gap: 20px; /* Espacio entre columnas */
     flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
-    padding: 0 10px; /* Márgenes laterales */
+    padding: 0 30px; /* Márgenes laterales */
   }
   
   .igualas h1 {
