@@ -93,7 +93,7 @@ function solonumeros(e){
 
 
 //validar formulario-contacto
-/* function validar(){
+function validar(){
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
     let celular = document.getElementById("celular").value;
@@ -139,4 +139,75 @@ function solonumeros(e){
         })
         return false;
     }
-} */
+} 
+
+
+// Función para obtener el HTML de la tabla
+function obtenerTablaHTML() {
+    // Obtiene el HTML del contenido de la tabla
+    return document.querySelector('#lista-compra').outerHTML;
+}
+
+
+function procesarCompra(e) {
+    e.preventDefault();
+    
+    if (compra.obtenerProductosLocalStorage().length === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No hay productos, selecciona alguno',
+            timer: 2500,
+            showConfirmButton: false
+        }).then(function () {
+            window.location = "productos.html";
+        });
+    } else if (cliente.value === '' || correo.value === '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese todos los campos requeridos',
+            timer: 2500,
+            showConfirmButton: false
+        });
+    } else {
+        emailjs.init('FWyOjB3CtGk-Az4VY');
+
+        const serviceID = 'service_fzqikcq';
+        const templateID = 'template_pg9cvt7';
+
+        // Obtén el HTML de la tabla
+        const tablaHTML = obtenerTablaHTML();
+
+        emailjs.send(serviceID, templateID, {
+            cliente: cliente.value,
+            correo: correo.value,
+            tabla_compra: tablaHTML, // Aquí se incluye el HTML de la tabla
+            subtotal: document.getElementById('subtotal').textContent,
+            igv: document.getElementById('igv').textContent,
+            total: document.getElementById('total').value
+        })
+        .then(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Compra realizada',
+                text: 'Tu pedido ha sido enviado',
+                timer: 2500,
+                showConfirmButton: false
+            }).then(() => {
+                compra.vaciarLocalStorage();
+                window.location = "productos.html";
+            });
+        }, (err) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Hubo un problema al enviar el correo',
+                timer: 2500,
+                showConfirmButton: false
+            });
+            console.log('Error:', err);
+        });
+    }
+}
+

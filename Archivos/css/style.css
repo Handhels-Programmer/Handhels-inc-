@@ -178,39 +178,56 @@ main{
     padding-top: 6rem;
 }
 
+
 /*slider*/
-.slider{
+.slider {
     padding-top: 4rem;
     width: 100%;
     margin: auto;
     overflow: hidden;
 }
-.slider ul{
-    display:flex;
+
+.slider ul {
+    display: flex;
     padding: 0;
-    width: 300%;
-    animation: cambio 15s infinite;
-    animation-direction: alternate;
-    animation-timing-function:linear;
+    width: 1200%; /* 12 imágenes, cada una ocupa el 100% */
+    animation: cambio 120s infinite; /* Ajuste en la duración de la animación (12 imágenes * 10s cada una) */
+    animation-timing-function: ease-in-out;
 }
-.slider li{
+
+.slider li {
     list-style: none;
+    width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+}
+
+.slider img {
     width: 100%;
 }
-.slider img{
-    width: 100%;
+
+@keyframes cambio {
+    0% { margin-left: 0; }
+    8.33% { margin-left: 0; } /* Pausa en la primera imagen */
+
+    16.66% { margin-left: -100%; }
+    25% { margin-left: -100%; } /* Pausa en la segunda imagen */
+
+    33.33% { margin-left: -200%; }
+    41.66% { margin-left: -200%; } /* Pausa en la tercera imagen */
+
+    50% { margin-left: -300%; }
+    58.33% { margin-left: -300%; } /* Pausa en la cuarta imagen */
+
+    66.66% { margin-left: -400%; }
+    75% { margin-left: -400%; } /* Pausa en la quinta imagen */
+
+    83.33% { margin-left: -500%; }
+    91.66% { margin-left: -500%; } /* Pausa en la sexta imagen */
+
+    100% { margin-left: -600%; } /* Avanza hasta la séptima imagen (y seguiría con las siguientes) */
 }
 
-@keyframes cambio{
-    0%{margin-left: 0;}
-    30%{margin-left:0;}
 
-    35%{margin-left: -100%;}
-    65%{margin-left: -100%;}
 
-    70%{margin-left: -200%;}
-    100%{margin-left: -200%;}
-}
 
 
 /*circulo imagenes*/
